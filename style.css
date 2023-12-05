@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font: 16px/1.6 "montserrat";
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#left{
+    height: 100%;
+    width: 50%;
+    /* background: #C8102E; */
+    position: relative;
+    overflow: hidden;
+}
+#overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background-color: #d15146;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#left #nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    padding: 0 10%;
+    color: white;
+    opacity: 0;
+    animation-name: nover;
+    animation-delay: 1.2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#left #nav h1{
+    font-family: "ogg trial";
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+
+}
+/* #left #nav i{
+    font-size: 20px;
+} */
+#left #nav span{
+    font-size: 20px;
+}
+#left img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    animation-delay: 1;
+    animation-name: imro;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#left>h1{
+    text-align: right;
+    font-family: "rophylar";
+    font-size: 8rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    color: white;
+    line-height: 1;
+    margin: 0 4rem 3rem 0;
+    letter-spacing: 2px;  
+    animation-name: over;
+    opacity: 0;
+    animation-delay: 1.2s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#right{
+    height: 100%;
+    width: 50%;
+    background-color: #f8f5ee;
+    position: relative;
+}
+#right #img1{
+    position: absolute;
+    left: 36%;
+    height:250px;
+    width: 260px;
+    object-fit: cover;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#right #img2{
+    position: absolute;
+    top:34%;
+    left: 10%;
+    height: 400px;
+    width: 340px;
+    object-fit: cover;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#right #img3{
+    position: absolute;
+    right: 16%;
+    bottom: 0%;
+    height: 260px;
+    width: 250px;
+    opacity: 0;
+    animation-delay: 1s;
+    object-fit: cover;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+#right h1{
+    text-align: right;
+    font-family: "rophylar";
+    font-size: 5rem;
+    position: absolute;
+    right: -16%;
+    top: 28%;
+    rotate: 270deg;
+    z-index: 99;
+    color: #303127;
+    line-height: 6rem;
+    animation-name: over;
+    opacity: 0;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes move {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes imro {
+    0%{
+        transform: rotate(-45deg) scale(2);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+@keyframes over {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
+@keyframes nover {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    
+}
