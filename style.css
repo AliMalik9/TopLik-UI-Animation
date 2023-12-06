@@ -158,6 +158,7 @@ html, body {
     color: #303127;
     line-height: 6rem;
     animation-name: over;
+    animation-delay: 1s;
     opacity: 0;
     animation-duration: 2s;
     animation-fill-mode: forwards;
